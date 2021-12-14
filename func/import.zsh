@@ -5,7 +5,16 @@ source ${0:h:A}/common.zsh
 
 # Gentoo Linux
 if [[ $(uname -s) == "Linux" && $(lsb_release -si) == "Gentoo" ]] {
-  source /etc/profile
+  umask 022
+
+  if [ -e /etc/profile.env ] ; then
+	  . /etc/profile.env
+  fi
+
+  for sh in /etc/profile.d/*.sh ; do
+    [ -r "$sh" ] && . "$sh"
+  done
+  unset sh
 }
 
 # Deepin_Dev
