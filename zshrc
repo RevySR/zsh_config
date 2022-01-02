@@ -17,11 +17,14 @@ zinit light zsh-users/zsh-completions
 
 # sudo
 zinit snippet OMZP::sudo/sudo.plugin.zsh
-# macos plugins
-zinit ice svn
-zinit snippet OMZP::macos
-# brew
-zinit snippet OMZP::brew/brew.plugin.zsh
+
+if [[ $(uname -s) == "Darwin" ]] {
+  # macos plugins
+  zinit ice svn
+  zinit snippet OMZP::macos
+  # brew
+  zinit snippet OMZP::brew/brew.plugin.zsh  
+}
 
 source $MY_ZSH/func/import.zsh
 
