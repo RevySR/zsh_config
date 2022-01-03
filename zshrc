@@ -28,13 +28,18 @@ zinit wait lucid for \
 
 # sudo
 zinit snippet OMZP::sudo/sudo.plugin.zsh
+zinit snippet OMZP::ssh-agent/ssh-agent.plugin.zsh
 
 if [[ $(uname -s) == "Darwin" ]] {
   # macos plugins
   zinit ice svn
   zinit snippet OMZP::macos
   # brew
-  zinit snippet OMZP::brew/brew.plugin.zsh  
+  zinit snippet OMZP::brew/brew.plugin.zsh
+}
+
+if [[ $(uname -s) == 'Darwin' && $(uname -m) == 'arm64' ]] {
+  eval $(/opt/homebrew/bin/brew shellenv)
 }
 
 source $MY_ZSH/func/import.zsh
