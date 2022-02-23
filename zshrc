@@ -30,6 +30,9 @@ zinit wait lucid for \
 zinit snippet OMZP::sudo/sudo.plugin.zsh
 zinit snippet OMZP::ssh-agent/ssh-agent.plugin.zsh
 
+# svn
+zinit snippet OMZP::svn/svn.plugin.zsh
+
 if [[ $(uname -s) == "Darwin" ]] {
   # macos plugins
   zinit ice svn
