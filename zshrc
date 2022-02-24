@@ -50,3 +50,6 @@ source $MY_ZSH/func/import.zsh
 if [ -f $HOME/.local.zsh ]; then
   source $HOME/.local.zsh
 fi
+
+# fix debian sbin
+export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
