@@ -33,6 +33,9 @@ zinit snippet OMZP::ssh-agent/ssh-agent.plugin.zsh
 # svn
 zinit snippet OMZP::svn/svn.plugin.zsh
 
+# tmux
+zinit snippet OMZP::tmux/tmux.plugin.zsh
+
 if [[ $(uname -s) == "Darwin" ]] {
   # macos plugins
   zinit ice svn
