@@ -1,4 +1,4 @@
-# import 
+# import
 
 source ${0:h:A}/func.zsh
 source ${0:h:A}/common.zsh
@@ -15,6 +15,7 @@ if [[ $(uname -s) == "Linux" && $(lsb_release -si) == "Gentoo" ]] {
     [ -r "$sh" ] && . "$sh"
   done
   unset sh
+  source ${0:h:A}/gentoo.zsh
 }
 
 # Deepin_Dev
