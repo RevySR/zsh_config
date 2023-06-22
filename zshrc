@@ -2,6 +2,10 @@ export MY_ZSH=$HOME/.zsh_config
 #zmodload zsh/zprof
 source $MY_ZSH/.zinit/zinit.zsh
 
+if [[ $(uname -s) == 'Darwin' && $(uname -m) == 'arm64' ]] {
+  eval $(/opt/homebrew/bin/brew shellenv)
+}
+
 ZSH_THEME="ys"
 
 zinit snippet OMZL::git.zsh
@@ -42,10 +46,6 @@ if [[ $(uname -s) == "Darwin" ]] {
   zinit snippet OMZP::macos
   # brew
   zinit snippet OMZP::brew/brew.plugin.zsh
-}
-
-if [[ $(uname -s) == 'Darwin' && $(uname -m) == 'arm64' ]] {
-  eval $(/opt/homebrew/bin/brew shellenv)
 }
 
 source $MY_ZSH/func/import.zsh
