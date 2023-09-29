@@ -41,11 +41,10 @@ zinit snippet OMZP::svn/svn.plugin.zsh
 zinit snippet OMZP::tmux/tmux.plugin.zsh
 
 # pyenv
-command -v pyenv >/dev/null && {
-	export PYENV_ROOT="$HOME/.pyenv"
-	eval "$(pyenv init -)"
-	zinit snippet OMZP::pyenv/pyenv.plugin.zsh
-}
+export PATH=$MY_ZSH/tools/pyenv/bin/:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
+zinit snippet OMZP::pyenv/pyenv.plugin.zsh
 
 if [[ $(uname -s) == "Darwin" ]] {
   # macos plugins

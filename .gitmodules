@@ -4,3 +4,6 @@
 [submodule "tools/b4"]
 	path = tools/b4
 	url = https://github.com/mricon/b4.git
+[submodule "tools/pyenv"]
+	path = tools/pyenv
+	url = https://github.com/pyenv/pyenv.git
