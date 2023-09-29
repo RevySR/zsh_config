@@ -32,6 +32,8 @@ zinit wait lucid for \
 
 # sudo
 zinit snippet OMZP::sudo/sudo.plugin.zsh
+# ssh agent
+zstyle :omz:plugins:ssh-agent agent-forwarding yes
 zinit snippet OMZP::ssh-agent/ssh-agent.plugin.zsh
 
 # svn
