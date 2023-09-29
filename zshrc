@@ -72,3 +72,7 @@ fi
 
 # fix debian sbin
 export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+
+# force locale
+export LANG=en_US.UTF-8
+export LC_CTYPE="en_US.UTF-8"
