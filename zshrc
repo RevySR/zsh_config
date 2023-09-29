@@ -40,6 +40,13 @@ zinit snippet OMZP::svn/svn.plugin.zsh
 # tmux
 zinit snippet OMZP::tmux/tmux.plugin.zsh
 
+# pyenv
+command -v pyenv >/dev/null && {
+	export PYENV_ROOT="$HOME/.pyenv"
+	eval "$(pyenv init -)"
+	zinit snippet OMZP::pyenv/pyenv.plugin.zsh
+}
+
 if [[ $(uname -s) == "Darwin" ]] {
   # macos plugins
   zinit ice svn
@@ -56,6 +63,12 @@ fi
 
 if [ -f $HOME/local.zsh ]; then
   source $HOME/local.zsh
+fi
+
+# load b4 patch tool
+if [ -f $MY_ZSH/tools/b4/b4.sh ]; then
+  export SCRIPT_TOP=$MY_ZSH/tools/b4/
+  alias b4="$MY_ZSH/tools/b4_fix.sh"
 fi
 
 # fix debian sbin

@@ -1,3 +1,6 @@
 [submodule ".zinit"]
 	path = .zinit
 	url = https://github.com/zdharma-continuum/zinit.git
+[submodule "tools/b4"]
+	path = tools/b4
+	url = https://github.com/mricon/b4.git
