@@ -24,3 +24,8 @@ function unset_proxy() {
 }
 
 alias up=unset_proxy
+
+function hide_git_info() {
+  git config --add oh-my-zsh.hide-dirty 1
+  git config --add oh-my-zsh.hide-status 1
+}
