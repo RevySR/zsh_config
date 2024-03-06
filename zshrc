@@ -50,8 +50,12 @@ zinit snippet OMZP::pyenv/pyenv.plugin.zsh
 
 if [[ $(uname -s) == "Darwin" ]] {
   # macos plugins
-  zinit ice svn
-  zinit snippet OMZP::macos
+  #zinit ice svn
+  #zinit snippet OMZP::macos
+  #zinit snippet OMZP::macos/music
+  #zinit snippet OMZP::macos/spotify
+  #zinit snippet OMZP::macos/macos.plugin.zsh
+  
   # brew
   zinit snippet OMZP::brew/brew.plugin.zsh
 }
