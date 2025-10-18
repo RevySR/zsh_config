@@ -8,6 +8,7 @@ if [[ $(uname -s) == 'Darwin' && $(uname -m) == 'arm64' ]] {
 
 ZSH_THEME="ys"
 
+zinit snippet OMZL::async_prompt.zsh
 zinit snippet OMZL::git.zsh
 zinit snippet OMZL::completion.zsh
 zinit snippet OMZL::history.zsh
